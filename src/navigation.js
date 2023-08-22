@@ -6,19 +6,6 @@ let clicked = false;
 btnSearch.addEventListener("click", () => {
   location.hash = "#search=" + inputSearch.value;
 });
-btnSearch.addEventListener("mouseover", () => {
-  inputSearch.classList.remove("inactive");
-});
-btnSearch.addEventListener("mouseout", () => {
-  inputSearch.classList.add("inactive");
-});
-inputSearch.addEventListener("mouseover", () => {
-  inputSearch.classList.remove("inactive");
-});
-inputSearch.addEventListener("mouseout", () => {
-  inputSearch.classList.add("inactive");
-});
-
 btnMore.addEventListener("click", () => {
   location.hash = "#trends=";
 });
@@ -29,10 +16,6 @@ categorieA.addEventListener("mouseover", (event) => {
   navCategorie.classList.remove("inactive");
   event.stopPropagation();
 });
-// categorieA.addEventListener("mouseout", (event) => {
-//   navCategorie.classList.add("inactive");
-//   event.stopPropagation();
-// });
 navCategorie.addEventListener("mouseover", (event) => {
   navCategorie.classList.remove("inactive");
 });

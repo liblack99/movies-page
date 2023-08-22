@@ -39,9 +39,10 @@ const Relatedcard = document.getElementById("relatedCard");
 
 const favoritesSection = document.getElementById("favorites");
 const moviesFavorites = document.getElementById("moviesFavorites");
-
+//footer
 const footerSection = document.querySelector("footer");
 
+//icon
 const svgTemplate = `
       <svg id=star xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star-filled" width="30" height="30" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>

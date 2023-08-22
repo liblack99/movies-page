@@ -276,7 +276,8 @@ function getLikedMovies() {
 
   console.log(likedMovies);
 }
-//paginacion
+
+//pagination
 
 function getPaginatedMoviesByCategory(id) {
   return async function () {
