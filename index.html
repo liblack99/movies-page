@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="./assets/icon/icon.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@700;800&family=Red+Hat+Display:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/movil.css" media="(max-width: 1055px)" />
+    <title>MOVIE PAGE</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <div class="menu " id="menu" >
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="40" height="40" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M4 6l16 0"></path>
+          <path d="M4 12l16 0"></path>
+          <path d="M4 18l16 0"></path>
+       </svg>
+       <div class="nav-movil">
+
+       </div>
+      </div>
+        <h1 class="nav-title">Movie page</h1>
+        <div class="nav-option" id="navOption">
+          <ul>
+            <li><a href="" id="inicioA">HOME</a></li>
+            <li>
+              <a class="categorie-a" id="categorieA">CATEGORIES</a>
+              <div class="nav-categorie inactive" id="navCategorie">
+                <!-- <div><h3>categorias</h3></div> -->
+              </div>
+            </li>
+            <li><a href="#favorites">FAVORITES</a></li>
+          </ul>
+        </div>
+        <form class="nav-search-container">
+          <input
+            id="inputSearch"
+            class="nav-search inactive"
+            type="text"
+            placeholder="search"
+          />
+          <button class="nav-btn" id="btnSearch">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-search"
+              width="40"
+              height="40"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path>
+              <path d="M21 21l-6 -6"></path>
+            </svg>
+          </button>
+        </form>
+      </nav>
+    </header>
+    <main>
+      <section class="carousel" id="carousel">
+        <div class="slide movie-container--loading">
+          
+        </div>
+      </section>
+      <section class="home" id="home">
+        <div class="home-title">
+          <h2>Trending</h2>
+          <button class="btn-more" id="btnMore">More</button>
+        </div>
+        <div class="movies-home" id="moviesHome">
+          <article class="movie-card movie-container--loading">
+            <!-- <span></span>
+            <img src="" alt="" /> -->
+          </article>
+          <article class="movie-card movie-container--loading">
+            <!-- <span></span>
+            <img src="" alt="" /> -->
+          </article>
+          <article class="movie-card movie-container--loading">
+            <!-- <span></span>
+            <img src="" alt="" /> -->
+          </article>
+          <article class="movie-card movie-container--loading">
+            <!-- <span></span>
+            <img src="" alt="" /> -->
+          </article>
+          <article class="movie-card movie-container--loading">
+            <!-- <span></span>
+            <img src="" alt="" /> -->
+          </article>
+        </div>
+      </section>
+      <section class="search" id="search">
+        <div class="search-title">
+          <h2>Result : <span class="result" id="result"></span></h2>
+        </div>
+        <div class="search-result" id="searchResult">
+          <article class="movie-card movie-container--loading">
+            <!-- <span></span>
+            <img src="" alt="" /> -->
+          </article>
+          <article class="movie-card movie-container--loading">
+            <!-- <span></span>
+            <img src="" alt="" /> -->
+          </article>
+          <article class="movie-card movie-container--loading">
+            <!-- <span></span>
+            <img src="" alt="" /> -->
+          </article>
+          <article class="movie-card movie-container--loading">
+            <!-- <span></span>
+            <img src="" alt="" /> -->
+          </article>
+          <article class="movie-card movie-container--loading">
+            <!-- <span></span>
+            <img src="" alt="" /> -->
+          </article>
+        </div>
+      </section>
+      <section class="categories" id="categories">
+        <div class="category-title">
+          <h2 id="categoryTilte"></h2>
+        </div>
+        <div class="categories-result" id="categoriesResult">
+          <article class="movie-card movie-container--loading">
+            <!-- <span></span>
+            <img src="" alt="" /> -->
+          </article>
+          <article class="movie-card movie-container--loading">
+            <!-- <span></span>
+            <img src="" alt="" /> -->
+          </article>
+          <article class="movie-card movie-container--loading">
+            <!-- <span></span>
+            <img src="" alt="" /> -->
+          </article>
+          <article class="movie-card movie-container--loading">
+            <!-- <span></span>
+            <img src="" alt="" /> -->
+          </article>
+          <article class="movie-card movie-container--loading">
+            <!-- <span></span>
+            <img src="" alt="" /> -->
+          </article>
+        </div>
+      </section>
+      <section class="trends" id="trends">
+        <div class="trends-title">
+          <h2>Trending</h2>
+        </div>
+        <div class="movies-trends" id="moviesTrends">
+          <article class="movie-card movie-container--loading">
+            <!-- <span></span>
+            <img src="" alt="" /> -->
+          </article>
+          <article class="movie-card movie-container--loading">
+            <!-- <span></span>
+            <img src="" alt="" /> -->
+          </article>
+          <article class="movie-card movie-container--loading">
+            <!-- <span></span>
+            <img src="" alt="" /> -->
+          </article>
+          <article class="movie-card movie-container--loading">
+            <!-- <span></span>
+            <img src="" alt="" /> -->
+          </article>
+          <article class="movie-card movie-container--loading">
+            <!-- <span></span>
+            <img src="" alt="" /> -->
+          </article>
+        </div>
+      </section>
+      <section class="desciption" id="desciption">
+        <div class="desciption-thumbnail" id="desciptionThumbnail">
+          <div class="movie-container--loading"></div>
+        </div>
+        <article class="desciption-container">
+          <div class="desciption-title">
+            <h2 id="desciptionTitle"></h2>
+            <div class="punctuation">
+              <span
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon icon-tabler icon-tabler-star-filled"
+                  width="40"
+                  height="40"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path
+                    d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z"
+                    stroke-width="0"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </span>
+              <span class="punctuation-number" id="punctuationNumber"></span>
+            </div>
+          </div>
+          <p class="desciption-text" id="desciptionText"></p>
+          <div class="desciption-genders" id="desciptionGenders">
+            <!-- <div><h3>categorias</h3></div> -->
+          </div>
+          <div class="related" id="related">
+            <div class="related-title">
+              <h2>Related Movies</h2>
+            </div>
+            <div class="related-movies" id="relatedMovies">
+              <article class="related-card movie-container--loading">
+                <!-- <span></span>
+                <img src="" alt="" /> -->
+              </article>
+              <article class="related-card movie-container--loading">
+                <!-- <span></span>
+                <img src="" alt="" /> -->
+              </article>
+              <article class="related-card movie-container--loading">
+                <!-- <span></span>
+                <img src="" alt="" /> -->
+              </article>
+              <article class="related-card movie-container--loading">
+                <!-- <span></span>
+                <img src="" alt="" /> -->
+              </article>
+              <article class="related-card movie-container--loading">
+                <!-- <span></span>
+                <img src="" alt="" /> -->
+              </article>
+            </div>
+          </div>
+        </article>
+      </section>
+      <section class="favorites" id="favorites">
+        <div class="favorites-title">
+          <h2>Your Favorites Movies</h2>
+        </div>
+        <div class="favorites-conatiner">   
+          <div class="movies-favorites movies-favorites--fondo" id="moviesFavorites">
+          </div>
+          <!-- <article class="favorite-card">
+            <span></span>
+            <img src="" alt="" />
+          </article> -->
+          
+        <div>
+
+        </div>
+      </section>
+    </main>
+    <footer>
+      <h2>Developed by Andres</h2>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./src/key.js"></script>
+    <script src="./src/node.js"></script>
+    <script src="./src/main.js"></script>
+    <script src="./src/navigation.js"></script>
+  </body>
+</html>
