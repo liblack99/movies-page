@@ -232,11 +232,9 @@ main {
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
+  justify-content: space-between;
   width: 100%;
   margin-left: 0;
-}
-.home-title {
-  justify-content: space-between;
 }
 .btn-more {
   background-color: white;
