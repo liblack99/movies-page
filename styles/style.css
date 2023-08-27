@@ -409,16 +409,20 @@ footer {
   box-shadow: 0px -10px 5px 0px rgba(112, 117, 122, 0.18);
   text-align: center;
 }
-footer h2 {
+footer a {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  font-size: 3rem;
 }
-footer a {
-  width: 40px;
-  height: 40px;
+footer a:hover {
+  text-decoration: underline;
 }
+
 .inactive {
   display: none;
 }
