@@ -422,7 +422,6 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
-
 .inactive {
   display: none;
 }

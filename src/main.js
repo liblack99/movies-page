@@ -119,6 +119,9 @@ async function getTrendingMoviesThumbnail() {
       "src",
       "https://image.tmdb.org/t/p/original" + movie.backdrop_path
     );
+    img.addEventListener("error", () => {
+      img.setAttribute("src", "./assets/icon/filled.svg");
+    });
     const information = document.createElement("div");
     information.classList.add("slide-informacion");
 
@@ -203,14 +206,13 @@ async function getTrendingMovies() {
 }
 async function getMovieById(id) {
   const { data: movie } = await API("movie/" + id);
+  desciptionThumbnail.innerHTML = "";
   const poster = document.createElement("img");
   poster.setAttribute("alt", movie.title);
   poster.setAttribute(
     "src",
     "https://image.tmdb.org/t/p/original" + movie.backdrop_path
   );
-
-  "https://image.tmdb.org/t/p/original" + movie.backdrop_path;
   desciptionThumbnail.appendChild(poster);
   desciptionTitle.textContent = movie.title;
   desciptionText.textContent = movie.overview;
@@ -259,12 +261,16 @@ async function getRelatedMovies(id) {
     img.addEventListener("click", () => {
       location.hash = "#movie=" + movie.id;
     });
+    img.addEventListener("error", () => {
+      img.setAttribute("src", "./assets/icon/filled.svg");
+    });
 
     article.appendChild(span);
     article.appendChild(img);
     related.appendChild(article);
   });
 }
+//favorites
 function getLikedMovies() {
   const likedMovies = likedMoviesList();
   const moviesArray = Object.values(likedMovies);
