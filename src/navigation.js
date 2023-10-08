@@ -9,18 +9,18 @@ btnSearch.addEventListener("click", () => {
 btnMore.addEventListener("click", () => {
   location.hash = "#trends=";
 });
-inicioA.addEventListener("click", () => {
+homeA.addEventListener("click", () => {
   location.hash = "#home";
 });
-categorieA.addEventListener("mouseover", (event) => {
-  navCategorie.classList.remove("inactive");
+categoriesA.addEventListener("mouseover", (event) => {
+  navCategories.classList.remove("inactive");
   event.stopPropagation();
 });
-navCategorie.addEventListener("mouseover", (event) => {
-  navCategorie.classList.remove("inactive");
+navCategories.addEventListener("mouseover", (event) => {
+  navCategories.classList.remove("inactive");
 });
-navCategorie.addEventListener("mouseout", () => {
-  navCategorie.classList.add("inactive");
+navCategories.addEventListener("mouseout", () => {
+  navCategories.classList.add("inactive");
 });
 menu.addEventListener("click", () => {
   if (!clicked) {
@@ -104,9 +104,11 @@ function categoriesPage() {
   footerSection.classList.add("inactive");
 
   const [_, categoryData] = location.hash.split("=");
+  console.log(categoryData);
   const [categoryId, categoryName] = categoryData.split("-");
+  console.log(categoryName);
 
-  categoryTilte.innerHTML = categoryName;
+  categoryTitle.textContent = categoryName;
   getCategories();
   getMoviesByCategory(categoryId);
   infiniteScroll = getPaginatedMoviesByCategory(categoryId);

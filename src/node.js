@@ -1,9 +1,9 @@
 //header
 const inputSearch = document.getElementById("inputSearch");
 const btnSearch = document.getElementById("btnSearch");
-const inicioA = document.getElementById("inicioA");
-const categorieA = document.getElementById("categorieA");
-const navCategorie = document.getElementById("navCategorie");
+const homeA = document.getElementById("homeA");
+const categoriesA = document.getElementById("categoriesA");
+const navCategories = document.getElementById("navCategories");
 const menu = document.getElementById("menu");
 const navOption = document.getElementById("navOption");
 
@@ -22,20 +22,20 @@ const searchResult = document.getElementById("searchResult");
 
 const categoriesSection = document.getElementById("categories");
 const categoriesResult = document.getElementById("categoriesResult");
-const categoryTilte = document.getElementById("categoryTilte");
+const categoryTitle = document.getElementById("categoryTitle");
 
 const trendSection = document.getElementById("trends");
 const moviesTrends = document.getElementById("moviesTrends");
 
-const descriptionSection = document.getElementById("desciption");
-const desciptionThumbnail = document.getElementById("desciptionThumbnail");
-const desciptionTitle = document.getElementById("desciptionTitle");
+const descriptionSection = document.getElementById("description");
+const descriptionThumbnail = document.getElementById("descriptionThumbnail");
+const descriptionTitle = document.getElementById("descriptionTitle");
 const punctuationNumber = document.getElementById("punctuationNumber");
-const desciptionText = document.getElementById("desciptionText");
-const desciptionGenders = document.getElementById("desciptionGenders");
+const descriptionText = document.getElementById("descriptionText");
+const descriptionGenders = document.getElementById("descriptionGenders");
 
 const related = document.getElementById("relatedMovies");
-const Relatedcard = document.getElementById("relatedCard");
+const relatedCard = document.getElementById("relatedCard");
 
 const favoritesSection = document.getElementById("favorites");
 const moviesFavorites = document.getElementById("moviesFavorites");

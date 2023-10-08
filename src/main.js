@@ -8,7 +8,6 @@ const API = axios.create({
   },
 });
 let slideIndex = 1;
-let mouseSobreElemento = false;
 
 function likedMoviesList() {
   const item = JSON.parse(localStorage.getItem("liked_movies"));
@@ -123,7 +122,7 @@ async function getTrendingMoviesThumbnail() {
       img.setAttribute("src", "./assets/icon/filled.svg");
     });
     const information = document.createElement("div");
-    information.classList.add("slide-informacion");
+    information.classList.add("slide-information");
 
     const title = document.createElement("h2");
     title.textContent = movie.title;
@@ -171,7 +170,7 @@ async function getCategories() {
   const { data } = await API("genre/movie/list");
   const categories = data.genres;
 
-  createElementCategories(navCategorie, categories);
+  createElementCategories(navCategories, categories);
 }
 
 async function getMovieBySearch(query) {
@@ -206,29 +205,29 @@ async function getTrendingMovies() {
 }
 async function getMovieById(id) {
   const { data: movie } = await API("movie/" + id);
-  desciptionThumbnail.innerHTML = "";
+  descriptionThumbnail.innerHTML = "";
   const poster = document.createElement("img");
   poster.setAttribute("alt", movie.title);
   poster.setAttribute(
     "src",
     "https://image.tmdb.org/t/p/original" + movie.backdrop_path
   );
-  desciptionThumbnail.appendChild(poster);
-  desciptionTitle.textContent = movie.title;
-  desciptionText.textContent = movie.overview;
+  descriptionThumbnail.appendChild(poster);
+  descriptionTitle.textContent = movie.title;
+  descriptionText.textContent = movie.overview;
   punctuationNumber.textContent = movie.vote_average.toFixed(1);
   const genres = movie.genres;
-  desciptionGenders.innerHTML = "";
+  descriptionGenders.innerHTML = "";
   genres.forEach((genre) => {
-    const contenedor = document.createElement("div");
+    const container = document.createElement("div");
     const title = document.createElement("h3");
     title.textContent = genre.name;
     title.setAttribute("id", "id" + genre.id);
     title.addEventListener("click", () => {
       location.hash = `#category=${genre.id}-${genre.name}`;
     });
-    contenedor.appendChild(title);
-    desciptionGenders.appendChild(contenedor);
+    container.appendChild(title);
+    descriptionGenders.appendChild(container);
   });
 
   getRelatedMovies(id);
