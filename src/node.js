@@ -1,11 +1,12 @@
 //header
 const inputSearch = document.getElementById("inputSearch");
 const btnSearch = document.getElementById("btnSearch");
-const homeA = document.getElementById("homeA");
-const categoriesA = document.getElementById("categoriesA");
+const HomeBtn = document.getElementById("homeBtn");
+const categoryBtn = document.getElementById("categoryBtn");
 const navCategories = document.getElementById("navCategories");
 const menu = document.getElementById("menu");
 const navOption = document.getElementById("navOption");
+const favoritesBtn = document.getElementById("favoritesBtn");
 
 //main
 const carousel = document.getElementById("carousel");
@@ -35,7 +36,6 @@ const descriptionText = document.getElementById("descriptionText");
 const descriptionGenders = document.getElementById("descriptionGenders");
 
 const related = document.getElementById("relatedMovies");
-const relatedCard = document.getElementById("relatedCard");
 
 const favoritesSection = document.getElementById("favorites");
 const moviesFavorites = document.getElementById("moviesFavorites");

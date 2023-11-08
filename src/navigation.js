@@ -9,18 +9,24 @@ btnSearch.addEventListener("click", () => {
 btnMore.addEventListener("click", () => {
   location.hash = "#trends=";
 });
-homeA.addEventListener("click", () => {
+homeBtn.addEventListener("click", () => {
   location.hash = "#home";
 });
-categoriesA.addEventListener("mouseover", (event) => {
+categoryBtn.addEventListener("mouseover", (event) => {
   navCategories.classList.remove("inactive");
   event.stopPropagation();
 });
 navCategories.addEventListener("mouseover", (event) => {
   navCategories.classList.remove("inactive");
+  event.stopPropagation();
 });
-navCategories.addEventListener("mouseout", () => {
+navCategories.addEventListener("mouseout", (event) => {
   navCategories.classList.add("inactive");
+  event.stopPropagation();
+});
+favoritesBtn.addEventListener("click", (event) => {
+  event.preventDefault();
+  favoritesSection.scrollIntoView({ behavior: "smooth" });
 });
 menu.addEventListener("click", () => {
   if (!clicked) {
@@ -104,11 +110,9 @@ function categoriesPage() {
   footerSection.classList.add("inactive");
 
   const [_, categoryData] = location.hash.split("=");
-  console.log(categoryData);
   const [categoryId, categoryName] = categoryData.split("-");
-  console.log(categoryName);
 
-  categoryTitle.textContent = categoryName;
+  categoryTitle.innerHTML = categoryName;
   getCategories();
   getMoviesByCategory(categoryId);
   infiniteScroll = getPaginatedMoviesByCategory(categoryId);
