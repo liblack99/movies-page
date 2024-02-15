@@ -12,18 +12,7 @@ btnMore.addEventListener("click", () => {
 homeBtn.addEventListener("click", () => {
   location.hash = "#home";
 });
-categoryBtn.addEventListener("mouseover", (event) => {
-  navCategories.classList.remove("inactive");
-  event.stopPropagation();
-});
-navCategories.addEventListener("mouseover", (event) => {
-  navCategories.classList.remove("inactive");
-  event.stopPropagation();
-});
-navCategories.addEventListener("mouseout", (event) => {
-  navCategories.classList.add("inactive");
-  event.stopPropagation();
-});
+
 favoritesBtn.addEventListener("click", (event) => {
   event.preventDefault();
   favoritesSection.scrollIntoView({ behavior: "smooth" });

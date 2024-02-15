@@ -89,8 +89,8 @@ function createElementMovies(
 function createElementCategories(container, categories) {
   container.innerHTML = "";
   categories.forEach((category) => {
-    const categoryContainer = document.createElement("div");
-    const categoryTitle = document.createElement("h3");
+    const categoryContainer = document.createElement("li");
+    const categoryTitle = document.createElement("a");
     categoryTitle.setAttribute("id", "id" + category.id);
     categoryTitle.addEventListener("click", () => {
       location.hash = `#category=${category.id}-${category.name}`;

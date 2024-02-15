@@ -18,7 +18,7 @@
     border-radius: 4px;
     display: none;
   }
-  .nav-option ul {
+  .nav-option-ul {
     width: 100%;
     list-style: none;
     display: flex;
@@ -29,19 +29,23 @@
     padding: 0;
     margin-top: 16px;
   }
-  .nav-option ul li {
+  .nav-option-ul > li {
     width: 100%;
     justify-content: center;
     align-items: center;
     text-align: center;
     border-bottom: 1px solid var(--light-1);
   }
-  .nav-categorie {
-    left: 150px;
-    top: 0px;
+  .nav-categories {
+    right: -270px;
+    top: -30px;
     background-color: rgba(0, 0, 0, 0.9);
+    display: none;
   }
-  .categorie-a {
+  .nav-categories::before {
+    content: none;
+  }
+  .categorie-li {
     position: relative;
   }
   .movies-home,
