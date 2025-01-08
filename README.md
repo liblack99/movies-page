@@ -4,7 +4,7 @@ Este es un proyecto de página web de películas desarrollado con JavaScript, HT
 
 ## Demo
 
-Puedes ver una demostración del proyecto [aquí](https://liblack99.github.io/Movies-page/) .
+Puedes ver una demostración del proyecto [aquí](https://liblack99.github.io/movies-page/) .
 
 ## Capturas de pantalla
 
