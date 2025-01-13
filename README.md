@@ -8,7 +8,7 @@ Puedes ver una demostración del proyecto [aquí](https://liblack99.github.io/mo
 
 ## Capturas de pantalla
 
-![movies-page](https://i.imgur.com/QhGtDxe.png)
+![movies-page](https://firebasestorage.googleapis.com/v0/b/pelagic-earth-407809.appspot.com/o/proyectos%2Fmovie.webp?alt=media&token=41614a7e-26d9-497a-b293-28a54c7ac9b3)
 
 ## Características
 
