@@ -44,7 +44,7 @@ const lazyLoadImages = new IntersectionObserver((entries) => {
 function createElementMovies(
   container,
   movies,
-  { lazyLoad = false, clean = true } = {}
+  {lazyLoad = false, clean = true} = {}
 ) {
   if (clean) {
     container.innerHTML = "";
@@ -105,7 +105,7 @@ function createElementCategories(container, categories) {
 }
 
 async function getTrendingMoviesThumbnail() {
-  const { data } = await API("trending/movie/day");
+  const {data} = await API("trending/movie/day");
   const movies = data.results;
   carousel.innerHTML = "";
 
@@ -157,7 +157,7 @@ function showSlides(slideIndex) {
 }
 
 async function getMoviesHome() {
-  const { data } = await API("trending/movie/day");
+  const {data} = await API("trending/movie/day");
   const movies = data.results;
 
   createElementMovies(moviesHome, movies, {
@@ -167,14 +167,14 @@ async function getMoviesHome() {
 }
 
 async function getCategories() {
-  const { data } = await API("genre/movie/list");
+  const {data} = await API("genre/movie/list");
   const categories = data.genres;
 
   createElementCategories(navCategories, categories);
 }
 
 async function getMovieBySearch(query) {
-  const { data } = await API("search/movie", {
+  const {data} = await API("search/movie", {
     params: {
       query,
     },
@@ -186,7 +186,7 @@ async function getMovieBySearch(query) {
   console.log(movies);
 }
 async function getMoviesByCategory(id) {
-  const { data } = await API("discover/movie", {
+  const {data} = await API("discover/movie", {
     params: {
       with_genres: id,
     },
@@ -197,14 +197,14 @@ async function getMoviesByCategory(id) {
   createElementMovies(categoriesResult, movies);
 }
 async function getTrendingMovies() {
-  const { data } = await API("trending/movie/day");
+  const {data} = await API("trending/movie/day");
   const movies = data.results;
   maxPage = data.total_pages;
 
   createElementMovies(moviesTrends, movies, true);
 }
 async function getMovieById(id) {
-  const { data: movie } = await API("movie/" + id);
+  const {data: movie} = await API("movie/" + id);
   descriptionThumbnail.innerHTML = "";
   const poster = document.createElement("img");
   poster.setAttribute("alt", movie.title);
@@ -233,7 +233,7 @@ async function getMovieById(id) {
   getRelatedMovies(id);
 }
 async function getRelatedMovies(id) {
-  const { data } = await API(`/movie/${id}/similar`);
+  const {data} = await API(`/movie/${id}/similar`);
 
   const relatedMovies = data.results;
   related.innerHTML = "";
@@ -278,22 +278,20 @@ function getLikedMovies() {
     lazyLoad: true,
     clean: true,
   });
-
-  console.log(likedMovies);
 }
 
 //pagination
 
 function getPaginatedMoviesByCategory(id) {
   return async function () {
-    const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
+    const {scrollTop, scrollHeight, clientHeight} = document.documentElement;
 
     const scrollIsBottom = scrollTop + clientHeight >= scrollHeight - 15;
     const pageIsNotMax = page < maxPage;
 
     if (scrollIsBottom && pageIsNotMax) {
       page++;
-      const { data } = await API("discover/movie", {
+      const {data} = await API("discover/movie", {
         params: {
           with_genres: id,
           page,
@@ -310,14 +308,14 @@ function getPaginatedMoviesByCategory(id) {
 }
 
 async function getPaginatedTrendingMovies() {
-  const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
+  const {scrollTop, scrollHeight, clientHeight} = document.documentElement;
   const pageIsNotMax = page < maxPage;
 
   const scrollIfFinal = scrollTop + clientHeight >= scrollHeight - 15;
 
   if (scrollIfFinal && pageIsNotMax) {
     page++;
-    const { data } = await API("trending/movie/day", {
+    const {data} = await API("trending/movie/day", {
       params: {
         page,
       },
@@ -332,14 +330,14 @@ async function getPaginatedTrendingMovies() {
 
 function getPaginatedMoviesBySearch(query) {
   return async function () {
-    const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
+    const {scrollTop, scrollHeight, clientHeight} = document.documentElement;
 
     const scrollIsBottom = scrollTop + clientHeight >= scrollHeight - 15;
     const pageIsNotMax = page < maxPage;
 
     if (scrollIsBottom && pageIsNotMax) {
       page++;
-      const { data } = await API("search/movie", {
+      const {data} = await API("search/movie", {
         params: {
           query,
           page,

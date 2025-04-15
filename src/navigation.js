@@ -15,7 +15,7 @@ homeBtn.addEventListener("click", () => {
 
 favoritesBtn.addEventListener("click", (event) => {
   event.preventDefault();
-  favoritesSection.scrollIntoView({ behavior: "smooth" });
+  favoritesSection.scrollIntoView({behavior: "smooth"});
 });
 menu.addEventListener("click", () => {
   if (!clicked) {
@@ -32,9 +32,8 @@ window.addEventListener("hashchange", navigator, false);
 window.addEventListener("scroll", infiniteScroll, false);
 
 function navigator() {
-  console.log({ location });
   if (infiniteScroll) {
-    window.removeEventListener("scroll", infiniteScroll, { pasive: false });
+    window.removeEventListener("scroll", infiniteScroll, {pasive: false});
     infiniteScroll = undefined;
   }
 
@@ -54,7 +53,7 @@ function navigator() {
   document.documentElement.scrollTop = 0;
 
   if (infiniteScroll) {
-    window.addEventListener("scroll", infiniteScroll, { pasive: false });
+    window.addEventListener("scroll", infiniteScroll, {pasive: false});
   }
 }
 
